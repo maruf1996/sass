@@ -1,0 +1,12 @@
+@mixin transition($sec: 0.3s) {
+  -webkit-transition: $sec;
+  -o-transition: $sec;
+  transition: $sec;
+}
+
+@mixin demo() {
+  font-size: 20px;
+  color: blue;
+  font-weight: 700;
+  font-style: italic;
+}

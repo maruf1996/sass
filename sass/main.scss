@@ -1,0 +1,36 @@
+@use "test" as *;
+
+@import "variables";
+@import "mixin";
+@import "test";
+
+h2 {
+  color: $color;
+  font-family: $font_family;
+}
+p {
+  color: $color_2;
+}
+span {
+  @include demo;
+}
+
+.menu {
+  width: 500px;
+  margin: auto;
+  ul {
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 15px;
+      a {
+        text-decoration: none;
+        @include transition($sec: 0.5s);
+        @include demo;
+      }
+      a:hover {
+        color: $color_2;
+      }
+    }
+  }
+}
