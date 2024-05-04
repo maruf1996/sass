@@ -4,33 +4,115 @@
 @import "mixin";
 @import "test";
 
-h2 {
-  color: $color;
-  font-family: $font_family;
-}
-p {
-  color: $color_2;
-}
-span {
-  @include demo;
-}
+// h2 {
+//   color: $color;
+//   font-family: $font_family;
+// }
+// p {
+//   color: $color_2;
+// }
+// span {
+//   @include demo;
+// }
 
-.menu {
-  width: 500px;
+// .menu {
+//   width: 500px;
+//   margin: auto;
+//   ul {
+//     li {
+//       list-style: none;
+//       display: inline-block;
+//       padding: 0 15px;
+//       a {
+//         text-decoration: none;
+//         @include transition($sec: 0.5s);
+//         @include demo;
+//       }
+//       a:hover {
+//         color: $color_2;
+//       }
+//     }
+//   }
+// }
+
+// // inheritance
+// %sample {
+//   height: 200px;
+//   width: 200px;
+//   background-color: blue;
+//   display: inline-block;
+// }
+
+// .sample-1 {
+//   @extend %sample;
+// }
+// .sample-2 {
+//   @extend %sample;
+//   background-color: red;
+// }
+// .sample-3 {
+//   @extend %sample;
+//   background-color: yellow;
+// }
+
+// bem methos
+// .services-item {
+//   .services-thumb {
+//     img {
+//       max-width: 200px;
+//     }
+//   }
+//   .services-content {
+//     h3 {
+//       color: red;
+//     }
+//     p {
+//       color: green;
+//     }
+//   }
+// }
+
+// .wlservices {
+//   &__thumb {
+//     img {
+//       max-width: inherit;
+//     }
+//   }
+//   &__text {
+//     p {
+//       color: teal;
+//     }
+//     &--icon {
+//       span {
+//         color: green;
+//       }
+//     }
+//   }
+//   &__title {
+//     color: red;
+//   }
+// }
+
+// flex
+.demo {
+  background-color: teal;
+  width: 1000px;
+  height: 500px;
+  padding: 20px;
   margin: auto;
-  ul {
-    li {
-      list-style: none;
-      display: inline-block;
-      padding: 0 15px;
-      a {
-        text-decoration: none;
-        @include transition($sec: 0.5s);
-        @include demo;
-      }
-      a:hover {
-        color: $color_2;
-      }
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  //   flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  line-height: 100px;
+  font-size: 30px;
 }
